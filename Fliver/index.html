@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Fliver - Tu plataforma de streaming</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#E50914",
+                        "background-light": "#f6f6f8",
+                        "background-dark": "#141414",
+                    },
+                    fontFamily: {
+                        "display": ["Spline Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+    <style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+    </style>
+</head>
+<body class="bg-background-dark font-display">
+<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<div class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[1280px] flex-1">
+<header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#292938] px-10 py-3">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-primary">
+<div class="size-8">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 45.8096C19.6865 45.8096 15.4698 44.5305 11.8832 42.134C8.29667 39.7376 5.50128 36.3314 3.85056 32.3462C2.19985 28.361 1.76794 23.9758 2.60947 19.7452C3.451 15.5145 5.52816 11.6284 8.57829 8.5783C11.6284 5.52817 15.5145 3.45101 19.7452 2.60948C23.9758 1.76795 28.361 2.19986 32.3462 3.85057C36.3314 5.50129 39.7376 8.29668 42.134 11.8833C44.5305 15.4698 45.8096 19.6865 45.8096 24L24 24L24 45.8096Z" fill="currentColor"></path>
+</svg>
+</div>
+<h1 class="text-white text-2xl font-bold leading-tight tracking-[-0.015em]">Fliver</h1>
+</div>
+<label class="flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+<div class="text-[#9d9db8] flex border-none bg-[#292938] items-center justify-center pl-4 rounded-l-lg border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-white focus:outline-0 focus:ring-0 border-none bg-[#292938] focus:border-none h-full placeholder:text-[#9d9db8] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Buscar series, películas, anime..." value=""/>
+</div>
+</label>
+</div>
+<div class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="text-white text-sm font-medium leading-normal" href="#">Series</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Películas</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Anime</a>
+<a class="text-white text-sm font-medium leading-normal" href="#">Documentales</a>
+</div>
+<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10" data-alt="Avatar de usuario genérico" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB__7GQID538HRVBlXuiTN411RKVvf_CzD6k0598s-9xqkoUg-gqlQMo42vVc1IxbU6s2RPJi_r3nln0ZWy25uULYtpvce2jI93ORJ_mVYZ72yb4NWEcjxrNwplrTEiZSM7ZThYaVeXGbftHpwu7_K5ipdZECGMG-7QxYsRM_uIokXlLoDdcQI2bFg8jlJbIfbarD5e4_vgqNW3svUBXgJDzsNSxB880wYeFqPR8asSBoSrWYvcSQ49pdctdz8cQLj8LAUqzddpc8A");'></div>
+</div>
+</header>
+<main class="px-10 py-5 flex flex-col gap-8">
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4 w-full">
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[280px]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" data-alt="Póster de la película destacada 1, una escena de acción" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAob66nFHiRVXzcC3jneMm8EKcdNG_QkfASXKC845aQ-GenOnH1FI9g0Zu0HAXGkvKLo782IumF8LyAEb660q7r1sOORCVqDy7rnMQ7n1SozM8Yq2hAma-oxt-ngebAn77xy0jo8AFjXKTh3q0hCe94XWHFLAPDYVRpLhVP4ZyP_v0WQbotLYmAKVqW1r6CbFxxTENq0vNpkF-06c1nD1PEshUWeEUebyf80FZX4zMMQHbtCgJBZ8NPjMretSN4lu8m5lg2piT_bbU");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">Inception</p>
+<p class="text-[#9d9db8] text-sm font-normal leading-normal">Un ladrón que roba secretos corporativos a través del uso de la tecnología de compartir sueños.</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[280px]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" data-alt="Póster de la película destacada 2, un paisaje de ciencia ficción" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBVfkuglh1sYuceINrH0MxU8Cby7hEMUggsM_CuKufpfMjW5QHuxGNE_34uan8yXB0tQY_TfL_3hJxfzm4_5JAZTkidpjZL820y9-hgMKjrtDuTgt9KLy1P7QA15cWwBFYzy3PnvLXkreDQZo1y6nn23tCt9fk9bZsIUrhzjfhXJwv5sLNIrCQk_j313pSg_lokALvXMBMeF8xP9EQx3Qx-xiYq5xY9T_kcTs8jXZN-reYkx_zk6Zifdowt6OUOmqDKtGcWyKrhXrU");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">Blade Runner 2049</p>
+<p class="text-[#9d9db8] text-sm font-normal leading-normal">Un nuevo blade runner descubre un secreto que podría sumir a la sociedad en el caos.</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[280px]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" data-alt="Póster de la película destacada 3, una aventura épica" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCkxpoWfoOJHXjSHa0vTl4_k25iX6wy1nxuY7iRc-l2h-jYI-5TDxy-tadgFuP3iSZg3L6TOPdW8C2BzrQhxIysWPrYJWUg1lE7M0DiSndgbufSu10__SPXWSW2kioyFaaboMI0NT3Rxr-QiSYkWhHkHsRdXPnDH98f0WltkPNxzOdSOhb3C-flq7x_yEUevs72xxTk9Z4ZP9F9T8s1knI0v2ogLV7poyGfPkbG7hxGjKTg0Rw5DglfwaXByzQm3JoS8I-1K49-46k");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">Dune</p>
+<p class="text-[#9d9db8] text-sm font-normal leading-normal">El viaje de un héroe mítico y cargado de emociones.</p>
+</div>
+</div>
+<div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-[280px]">
+<div class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col" data-alt="Póster de la película destacada 4, una historia de superhéroes" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAl1PZSJTI9NwcWg4Xj84j07wN0Y2tj6nom8NAIdlBiHnY8c0d5405K_AC5ciQ9WfQZ9UeJix3i_ay4JioLHnj0kRtGbRfc7I-iPHAUXtdFBzsrlCbiI0XiEwgWKCSfZFtfPa7O-On-z7n_TpC2RNBuV2Wmlk4OWm1xoE_MpiM-twzu_kT-XL6__VPZ3JDWHpZCKV7r3GIMCBRr3WFnGFTV6N0P17egtWdgG2tvM9eDf-lYpbrr9hPAPqFa6W9n0SD-UFQkrTl6YW0");'></div>
+<div>
+<p class="text-white text-lg font-bold leading-normal">The Dark Knight</p>
+<p class="text-[#9d9db8] text-sm font-normal leading-normal">Batman debe aceptar uno de los mayores desafíos psicológicos y físicos de su vida.</p>
+</div>
+</div>
+</div>
+</div>
+<section>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Últimas Novedades en Series</h2>
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster de la serie 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAxkXgjFuqM4LMGj2zqv9x3FVquh36O5hVUE6bCzcRzxk89zNRRGzW3NBLpo14gFIyrarncOqc4_2TCJNHArz_J9ReflvGNcgn5zQREH0G0Mh3o6DGMW-rmBaAM0SAAA8fk8q-vff9fkoBiuoTKzvpeGsKuxBknYV9xeOFAjTYhkvzxWxH1caRwgslepQ_Y-tsiYkMaf7ME4zTVW_Pz4AyubmByjUPBpVr-vPrV7MDtyumSNh9272o1BhTiNlaJO1Q9fPpXoN5_D0s");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Stranger Things</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Un grupo de niños se enfrenta a fuerzas sobrenaturales.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster de la serie 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAV4o8ZMRM8VKXKT9flUlgIMeFP4OywTH8FLuEhP2C4ap6MzIiQnEiR6Kxm9BdgJ2P_jbK_ViERxPoRY0W1FbqfeEppXm0o9n5YDrZnpv41xO_t9WDayU8xSX7HToPcWjZoo8pGKZs67LygDBVyBRYWd6Z4TfM8yN9SLZoDVWBHuWAsrhnmZpgeEXipdU0sAlMO6Ni5wzkENnY7lN-EczZJ3Y9qrdUK4NKrQDaDlMkGMQszysOdZg6fP06gOIBdL7k8S4bIvpv2ZvQ");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">The Witcher</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Geralt de Rivia, un cazador de monstruos, lucha por encontrar su lugar.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster de la serie 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDTTddpSZIatAKV-fcbdHvwH9QlQLoAgcuhic-Z1F9B-vaRM2zxFVnXNFhLhaEgeImPMb9n5NBj05pVopC9SxAv4YALCFwwyhVmh0ZPZugD6PRxFIcR8DC1AYzjFfVxKgmCGGjvYz6mSuBVwVBglYZ3yCCMc9X24-f5SARuCUShOb2JdJNECnJkbTQBUksBeFxKKPw6UogLSWL4qBJ5PFI_xtZnxUkCShjELpAwU9637Fu3YEsZ7uzU-3WK4bixAaOy4mMZiPEtO2Q");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">The Crown</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Sigue las rivalidades políticas y el romance del reinado de la reina Isabel II.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster de la serie 4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDkI0nFWAspb0-ebeKx9mrjd2JC3FTWYSE0z0q_4yVzy7vfTzrZro08TLTfJj9F3yspvvm0LOop887ThsKO_JDd7JK238OAxDzUFgkvpfSpHOS4tyUmgzIRLmVZOAwEQV3dp0dtewkK3dstOxhhpsEjjwymM-JiY1YxbRAa2mGEeR8mmsGToEMS-IE0Y-ML0BBsMhTEvmPAzzmJoE6IOk9q9bCJlO86XEYgC8eZ6gTaQhHzRTSJnNttCyVEw9eeNMjkVE33P_ghaqA");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Breaking Bad</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Un profesor de química con cáncer terminal se asocia con un ex-alumno para fabricar metanfetamina.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster de la serie 5" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD-pKsfWwSCyGnX3XFaAOcu2i1sXXyzjCO7au5ZsQMeGpCUzyxtTuW1G8eeXlV-yXP_odEyVaTgVqeFjp2bqTSMO3DHF8q8xGs-_sHkxAo8HNY5XgKCoW1SEgSHK0S-gvSCN5Y_m3TYonQu2HvAMPoxX_i-aVZWC-abNIzYmLXuSoF7krnu0PNCqX8bLU3Rmf8Cd4YwkV-pjxV3LxqhnVCaME5vsvLBwY1R3Reu4diLRGidaewjyh3_PefJUC1phxIeXUxaPvLI4Ns");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Money Heist</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Un grupo de atracadores planea el mayor robo de la historia.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster de la serie 6" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBfhX1loF6l7-t7rsY-UKGG1xLVoNHUwT_T71cWOf0Ovw2n7ZMCBLfPJouzMZqekWdrAIY75uX2iaW1ckunfCOnapsJJtpXuX7uVJgzwOqim-StJjDZoAtWosxksncGQ36zChDikSUvYLmem2IdCKn6hv83DelD6IpB7u5xn4sRVT3-6JE0oAPunOVCWXq5gyf5IalkceyP7kO_-uowlnRXerJSL2j9YnsCWbTfVgE7MpuoHgPVlrxfEKdxJ1oB37FTEUBtj_-bSTQ");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Game of Thrones</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Nueve familias nobles luchan por el control de las tierras míticas de Westeros.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<h2 class="text-primary text-xl font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Últimas Novedades en Anime</h2>
+<div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+<div class="flex items-stretch p-4 gap-4">
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster del anime 1" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAsICVI5bTkPmV5PjXmYToUS-zl-uORtiTLjSKWy9GsLJFsIKEpOK8Q5vSImnD09YrwfiblYYK4ua8b2ieDULrpKtOb2U8_TwkZgl4JTferm1WGStqufily4pQAqkfVH0YVW1Epu9ZjIeZ_NraMa8ivuigWdVq0AQQZCYn8eczO6awWiVipnW_MJ4NM-XE5xLoqgfKNkehFoJ99kerKGAgQ_qLYySkjbP6k3E36DYq0404ru8gnYN5v193IhOSxeKBC6swwri8-ekc");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Attack on Titan</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">La humanidad lucha por sobrevivir contra gigantes humanoides.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster del anime 2" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCBDwRhRL_jYO-rQ6sq49Jf__yf09Ink-2fdmsxTaawPuA4weiPSg5u1yaZtlT65OnY8ZaBiUJKUo88ygUA12GIT0WeX8Pftzl8ucAAHDynmhFP-vmMVm5fPUEoQtLZWTXVl3brZIH6Twzk4we5IfkjsjyJaUa1SaPrJIRFFJou-pfqRmOMLnCKPG1P-XHFTY3hJxzLtJ35DZFolc7Et3AYyz1zP_9I5J3lx7kXiQI92NRVJXJxjMZdo5iJDA6QTCBnEFFSfRkGWS8");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Jujutsu Kaisen</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Un joven se une a una organización secreta de hechiceros.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster del anime 3" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAQ4tJUcNcvwRGmJmOnWDGE0bxgbDSTBcXkvS4vHq49nzDo-St-lZUn5XB46hRv8MApFgAM0o4H5jKiqMZtPcRWFGcFTvEbw3rEYqFSrGqPV-QuXlvVgD3xWMJSTxop38zrZq2_Nu3lXcIO4KO3GcvgZQo7Icu9c1dnctDzyAIFAaksikxN9U6kURC_LoXLCSF_cNanH46j6srm2ObgKZODtufyW-WDzuFhWlrVBOUZYnCVFJ_zfnf2Vzmq4SWtjwNz8vqdgct92_A");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Demon Slayer</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Un joven se convierte en un cazador de demonios para vengar a su familia.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster del anime 4" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0WAvZUWclA7kgSrjz3hgQfOWIHNZMBNL-fXGejwmmuE1PLSBUKHPWFkdvV4QpSR7pqPXXVnI_58ltzJYGgkLV_8KCNGUEA2b_uvN8jOQlrXJu1MP8N2UwRAlD0c5e81CVsw6tISIBwRJlI9HtiYtXgeZFpPiX3kxjBJwpb8a5ArrTgdrzS-ABpoW13lBpzwd9l7FMf3cK-4dFV234_I89DisMOHyAgy7owhmkihkb9u2Fxnf1wfYCqPoQ3y-cTbDoWlulyJQKNgM");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">My Hero Academia</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Un niño sin superpoderes en un mundo de superhéroes sueña con convertirse en uno.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+<div class="group relative flex h-full flex-1 flex-col rounded-lg bg-[#1c1c26] shadow-[0_0_4px_rgba(0,0,0,0.1)] min-w-[180px] overflow-hidden">
+<div class="w-full bg-center bg-no-repeat aspect-[3/4] bg-cover rounded-lg flex flex-col transition-transform duration-300 group-hover:scale-105" data-alt="Póster del anime 5" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBjjcCrwsdCPr73sJzEXH83wBvUl-rmIJP5rIQu0na5Y3dRME1MxUSUoJl9X-CeUz7qc14gwWf-htaCLrq3AVFtSrwWQT2avNVdXjhvwg06vkHAXZdC9a013Ir_7JGFO_Hf5PH3eR--kTY6VXZAfpgEe74Pr-EZb6Id9ky72vgCJ7qMO4vMuEYJ676zz_vIfP-_vIVsOiTmNegcYOTQA_2vR0YpjRNDYfnXB5tYNS4Rdr_H91PfDmB14vR-JFo23SIH-5kBRnRgPjo");'></div>
+<div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-4">
+<p class="text-white text-base font-bold leading-normal">Naruto Shippuden</p>
+<p class="text-gray-300 text-sm font-normal leading-normal mb-2">Las aventuras de un joven ninja que busca el reconocimiento.</p>
+<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]"><span class="truncate">Ver ahora</span></button>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="text-center text-gray-500 text-sm py-8 px-10 border-t border-solid border-t-[#292938]">
+<p>© 2023 Fliver. Todos los derechos reservados.</p>
+<div class="flex justify-center gap-4 mt-2">
+<a class="hover:text-white" href="#">Términos de servicio</a>
+<a class="hover:text-white" href="#">Política de privacidad</a>
+<a class="hover:text-white" href="#">Ayuda</a>
+</div>
+</footer>
+</div>
+</div>
+</div>
+</div>
+</body></html>
