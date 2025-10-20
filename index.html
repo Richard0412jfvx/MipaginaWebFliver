@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fliver - Próximamente</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#1414b8",
+            "background-light": "#f6f6f8",
+            "background-dark": "#0A0E1A",
+          },
+          fontFamily: {
+            "display": ["Spline Sans", "sans-serif"]
+          },
+          borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-dark font-display">
+<div class="relative flex h-screen w-full flex-col group/design-root overflow-hidden">
+<header class="absolute top-0 left-0 w-full p-6 z-10">
+<div class="flex items-center">
+<svg class="w-10 h-10 text-white" fill="currentColor" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"></path>
+</svg>
+<span class="text-white text-2xl font-bold ml-2">Fliver</span>
+</div>
+</header>
+<div class="flex h-full grow flex-col">
+<div class="flex flex-1 justify-center items-center">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1 px-4">
+<div class="container mx-auto">
+<div class="flex min-h-[480px] flex-col gap-8 items-center justify-center text-center p-4" data-alt="Abstract background with blue and purple light streaks, suggesting speed and streaming technology.">
+<div class="flex flex-col gap-4">
+<h1 class="text-white text-5xl font-black tracking-tighter md:text-7xl">
+                  Página Web en desarrollo, ¡próximamente!
+                </h1>
+<h2 class="text-gray-300 text-lg md:text-xl font-normal">
+                  Prepárate para una nueva forma de ver tus películas y series favoritas.
+                </h2>
+</div>
+<button class="flex min-w-[84px] max-w-xs cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-6 bg-primary text-white text-base font-bold transition-transform duration-300 hover:scale-105">
+<span>Mantente informado</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer class="absolute bottom-0 w-full py-8">
+<div class="container mx-auto px-5">
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 text-center">
+<p class="text-[#9d9db8] text-sm">© 2023 Fliver. All rights reserved.</p>
+<div class="flex justify-center gap-5">
+<a class="text-[#9d9db8] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">social_leaderboard</span>
+</a>
+<a class="text-[#9d9db8] hover:text-white transition-colors" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+<a class="text-[#9d9db8] hover:text-white transition-colors" href="#">
+<svg class="feather feather-twitter" fill="none" height="24" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+</a>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-6">
+<a class="text-[#9d9db8] text-sm hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="text-[#9d9db8] text-sm hover:text-white transition-colors" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
