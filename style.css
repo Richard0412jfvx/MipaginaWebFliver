@@ -1,0 +1,1208 @@
+html {
+    scroll-behavior: smooth; /* Esto hace que el salto sea un deslizamiento elegante */
+}
+
+/* --- Color de Fondo para el BODY --- */
+body {
+    background-color: rgba(0, 0, 0, 0.911);
+    font-family: 'Inter', sans-serif;
+}
+
+/* --- Estilos base para el NAV --- */
+nav {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 15px; 
+    background-color: #1a1a1a; 
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box; 
+    color: white;
+}
+  
+.nav-izq,
+.nav-der {
+    display: flex; 
+    align-items: center; 
+    gap: 20px; 
+}
+  
+.logo {
+    text-decoration: none;
+    color: white; 
+    font-size: 24px;
+    font-weight: bold;
+}
+  
+/* --- Estilos de la Barra de Búsqueda --- */
+.contenedor-busqueda {
+    display: flex;
+    align-items: center;
+    background-color: #3a3a3a;
+    border-radius: 8px;
+    padding: 8px 12px;
+    width: 350px; 
+}
+  
+.input-busqueda {
+    flex-grow: 1;
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    margin-left: 10px; 
+}
+  
+.input-busqueda::placeholder {
+    color: #b0b0b0;
+}
+  
+.btn-busqueda {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+}
+  
+.btn-busqueda svg {
+    color: #b0b0b0;
+    width: 20px;
+    height: 20px;
+}
+  
+/* --- Estilos para los Enlaces de Navegación --- */
+.enlaces-nav {
+    display: flex; 
+    list-style: none; 
+    margin: 0;
+    padding: 0;
+    gap: 25px; 
+}
+  
+.enlaces-nav li { margin: 0; }
+  
+.enlaces-nav a {
+    text-decoration: none;
+    color: #e0e0e0; 
+    font-family: 'Inter', sans-serif; /* Aseguramos que use la fuente moderna */
+    font-size: 1.1rem; /* Aumentamos el tamaño (antes era 16px) */
+    font-weight: 600; /* Lo hacemos un poco más "gordito" (Semibold) */
+    letter-spacing: 0.5px; /* Un pelín de espacio entre letras queda muy premium */
+    transition: color 0.3s ease, text-shadow 0.3s ease; /* Transición suave al pasar el ratón */
+}
+  
+.enlaces-nav a:hover { 
+    color: #fff; 
+    text-shadow: 0 0 8px rgba(255,255,255,0.4); /* Pequeño brillo al pasar el ratón */
+}
+  
+/* --- Estilos del Icono de Perfil --- */
+.icono-perfil img {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%; 
+    object-fit: cover; 
+    cursor: pointer;
+}
+
+/* --- SECCIÓN MAS POPULARES --- */
+.mas-populares {
+  display: flex;           
+  width: 100%;             
+  height: 700px;           
+  overflow: hidden;        
+  background-color: #000;  
+  margin-top: 10px;
+  border-radius: 30px;
+}
+
+.mas-populares > div {
+  position: relative;
+  flex: 1;                 
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); 
+  overflow: hidden;        
+  min-width: 0;            
+  border-right: 1px solid #333;
+  padding: 20px;
+  background-size: cover;      
+  background-position: center; 
+  background-repeat: no-repeat;
+  color: white;              
+  display: flex;             
+  flex-direction: column;    
+  justify-content: center; 
+  align-items: flex-start;   
+  text-align: left;
+  cursor: pointer;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  margin: 0; 
+}
+
+.mas-populares:hover > div {
+  flex: 0;
+  padding: 0;      
+  opacity: 0;      
+  border: none;
+}
+
+.mas-populares > div:hover {
+  flex: 1;           
+  padding: 40px;     
+  opacity: 1;        
+  background-color: #222; 
+}
+
+.mas-populares > div p {
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+  margin: 0;
+  max-width: 650px;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  position: relative;
+  z-index: 2;
+  opacity: 0;            
+  transform: translateX(-20px); 
+  transition: all 0.3s ease;    
+}
+
+.mas-populares > div:hover p {
+  opacity: 1;            
+  transform: translateX(0);     
+  transition-delay: 0.2s;       
+}
+
+/* Series Destacadas */
+.serie-1 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Imagenes/stranger-things.png'); }
+.serie-2 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Imagenes/dark.png'); }
+.serie-3 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Imagenes/la-casa-de-papel.png'); }
+.serie-4 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Imagenes/olympo.png'); }
+.serie-5 { background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./Imagenes/lupin.png'); }
+
+.logo-serie {
+  width: 280px;       
+  height: auto;
+  margin-bottom: 10px;
+  display: block;
+  position: relative;
+  z-index: 2;
+  transition: width 0.5s ease;
+}
+
+.mas-populares > div:hover .logo-serie {
+  width: 500px; 
+  margin-bottom: 20px;
+}
+
+.mas-populares > div::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60%; 
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0) 100%);
+  z-index: 1; 
+  pointer-events: none; 
+  opacity: 0; 
+  transition: opacity 0.4s ease; 
+}
+
+.mas-populares > div:hover::before { opacity: 1; }
+
+/* --- CONTENEDOR PRINCIPAL (LA REJILLA) --- */
+.seccion-titulo-series {
+    padding: 60px 20px 0 20px; 
+}
+
+.cuadricula-series {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+  gap: 20px;              
+  padding: 10px 20px 40px 20px;    
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cuadricula-series > div {
+  aspect-ratio: 16/9;     
+  border-radius: 8px;     
+  overflow: hidden;       
+  cursor: pointer;
+  position: relative;     
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #1a1a1a; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid transparent; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
+  padding-bottom: 15px;      
+}
+
+.cuadricula-series > div:hover {
+  transform: scale(1.05); 
+  border-color: rgba(255, 255, 255, 0.619); 
+  box-shadow: 0 10px 20px rgba(0,0,0,0.5); 
+  z-index: 2; 
+}
+
+.cuadricula-series > div::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70%; 
+    z-index: 1;
+}
+
+.cuadricula-serie1 { background-image: url('./Imagenes/series/el-juego-del-calamar.png'); }
+.cuadricula-serie2 { background-image: url('./Imagenes/series/arcane.png'); }
+.cuadricula-serie3 { background-image: url('./Imagenes/series/miercoles.png'); }
+.cuadricula-serie4 { background-image: url('./Imagenes/series/x-men97.png'); }
+.cuadricula-serie5 { background-image: url('./Imagenes/series/andor.png'); }
+.cuadricula-serie6 { background-image: url('./Imagenes/series/shogun.png'); }
+.cuadricula-serie7 { background-image: url('./Imagenes/series/black-mirror.png'); }
+.cuadricula-serie8 { background-image: url('./Imagenes/series/los-bridgerton.png'); }
+.cuadricula-serie9 { background-image: url('./Imagenes/series/bronca.png'); }
+.cuadricula-serie10 { background-image: url('./Imagenes/series/one-piece.png'); }
+.cuadricula-serie11 { background-image: url('./Imagenes/series/the-mandalorian.png'); }
+.cuadricula-serie12 { background-image: url('./Imagenes/series/modern-family.png'); }
+.cuadricula-serie13 { background-image: url('./Imagenes/series/dopesick.png'); }
+.cuadricula-serie14 { background-image: url('./Imagenes/series/loki.png'); }
+.cuadricula-serie15 { background-image: url('./Imagenes/series/bluey.png'); }
+
+.letras-genericas { width: 100px; padding-left: 25px; }
+.letras-grande { width: 250px; height: 40px; padding-left: 20px; }
+.letras-media { width: 180px; padding-left: 20px; }
+.letras-pequena { width: 150px; padding-left: 20px; }
+
+/* ESTILOS PARA EL CARRUSEL DE LAS PELICULAS */
+.seccion-carrusel {
+    padding: 20px 40px; 
+    position: relative;
+}
+
+.titulo-seccion {
+    color: white;
+    font-size: 1.8rem; 
+    margin-bottom: 20px;
+    font-weight: 800; 
+    letter-spacing: 0.5px; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+    text-transform: uppercase; 
+}
+
+.contenedor-carrusel {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.pista-carrusel {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 5px 0; 
+    scrollbar-width: none; 
+}
+.pista-carrusel::-webkit-scrollbar { display: none; }
+
+.tarjeta-carrusel {
+    flex: 0 0 180px; 
+    aspect-ratio: 2 / 3; 
+    border-radius: 6px;
+    background-color: #222;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border: 3px solid transparent; 
+    transition: border-color 0.2s ease;
+    position: relative; 
+    display: flex;
+    align-items: flex-end; 
+    justify-content: center; 
+    overflow: hidden; 
+}
+
+.tarjeta-carrusel:hover { border-color: white; }
+
+.tarjeta-carrusel::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%; 
+    background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0) 100%);
+    pointer-events: none; 
+    z-index: 1;
+}
+
+.logo-tarjeta {
+    width: 85%; 
+    height: auto;
+    max-height: 70px; 
+    object-fit: contain; 
+    margin-bottom: 15px; 
+    position: relative; 
+    z-index: 2; 
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-carrusel:hover .logo-tarjeta { transform: scale(1.08); }
+
+.flecha-carrusel {
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(50, 50, 50, 0.8); 
+    border: none;
+    color: white;
+    width: 38px;       
+    height: 110px;     
+    border-radius: 20px; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.flecha-carrusel:hover {
+    background-color: rgba(80, 80, 80, 0.9); 
+    transform: scale(1.05); 
+}
+
+.flecha-carrusel span { font-size: 24px; font-weight: bold; }
+
+.flecha-izq { left: -20px; display: none; }
+.flecha-der { right: -20px; display: flex; }
+
+/* IMÁGENES CARRUSELES */
+.pelicula-1 { background-image: url('./Imagenes/peliculas/la-sociedad-de-la-nieve.png'); }
+.pelicula-2 { background-image: url('./Imagenes/peliculas/el-planeta-de-los-simios.png'); }
+.pelicula-3 { background-image: url('./Imagenes/peliculas/almas-en-pena-de-inisherin.png'); }
+.pelicula-4 { background-image: url('./Imagenes/peliculas/hamilton.png'); }
+.pelicula-5 { background-image: url('./Imagenes/peliculas/historia-de-un-matrimonio.png'); }
+.pelicula-6 { background-image: url('./Imagenes/peliculas/los-mitchell-contra-las-máquinas.png'); }
+.pelicula-7 { background-image: url('./Imagenes/peliculas/roma.png'); }
+.pelicula-8 { background-image: url('./Imagenes/peliculas/soul.png'); }
+.pelicula-9 { background-image: url('./Imagenes/peliculas/tyler-rake.png'); }
+.pelicula-10 { background-image: url('./Imagenes/peliculas/guardianes-de-la-galaxia.png'); }
+.pelicula-11 { background-image: url('./Imagenes/peliculas/dune-parte-dos.png'); }
+.pelicula-12 { background-image: url('./Imagenes/peliculas/barbie.png'); }
+.pelicula-13 { background-image: url('./Imagenes/peliculas/el-lobo-de-wall-street.png'); }
+.pelicula-14 { background-image: url('./Imagenes/peliculas/john-wick-4.png'); }
+.pelicula-15 { background-image: url('./Imagenes/peliculas/spider-man-a-traves-del-spider-verso.png'); }
+.pelicula-16 { background-image: url('./Imagenes/peliculas/super-mario-bros-la-pelicula.png'); }
+.pelicula-17 { background-image: url('./Imagenes/peliculas/top-gun-maverick.png'); }
+.pelicula-18 { background-image: url('./Imagenes/peliculas/the-batman.png'); }
+.pelicula-19 { background-image: url('./Imagenes/peliculas/the-matrix-resurrections.png'); }
+.pelicula-20 { background-image: url('./Imagenes/peliculas/avengers-endgame.png'); }
+
+.anime-1 { background-image: url('./Imagenes/anime/shingeki-no-kyojin.png'); }
+.anime-2 { background-image: url('./Imagenes/anime/demon-slayer.png'); }
+.anime-3 { background-image: url('./Imagenes/anime/jujutsu-kaisen.png'); }
+.anime-4 { background-image: url('./Imagenes/anime/naruto.png'); }
+.anime-5 { background-image: url('./Imagenes/anime/one-punch-man.png'); }
+.anime-6 { background-image: url('./Imagenes/anime/death-note.png'); }
+.anime-7 { background-image: url('./Imagenes/anime/fullmetal-alchemist.png'); }
+.anime-8 { background-image: url('./Imagenes/anime/dragon-ball-super.png'); }
+.anime-9 { background-image: url('./Imagenes/anime/evangelion.png'); }
+.anime-10 { background-image: url('./Imagenes/anime/hunter-x-hunter.png'); }
+.anime-11 { background-image: url('./Imagenes/anime/bleach.png'); }
+.anime-12 { background-image: url('./Imagenes/anime/sword-art-online.png'); }
+.anime-13 { background-image: url('./Imagenes/anime/tokyo-ghoul.png'); }
+.anime-14 { background-image: url('./Imagenes/anime/cowboy-bebop.png'); }
+.anime-15 { background-image: url('./Imagenes/anime/steins;gate.png'); }
+.anime-16 { background-image: url('./Imagenes/anime/violet-evergarden.png'); }
+.anime-17 { background-image: url('./Imagenes/anime/cyberpunk-edgerunners.png'); }
+.anime-18 { background-image: url('./Imagenes/anime/chainsaw-man.png'); }
+.anime-19 { background-image: url('./Imagenes/anime/spy-x-family.png'); }
+.anime-20 { background-image: url('./Imagenes/anime/my-hero-academia.png'); }
+
+.doc-1 { background-image: url('./Imagenes/documentales/nuestro-planeta.png'); }
+.doc-2 { background-image: url('./Imagenes/documentales/el-dilema-de-las-redes.png'); }
+.doc-3 { background-image: url('./Imagenes/documentales/the-last-dance.png'); }
+.doc-4 { background-image: url('./Imagenes/documentales/my-octopus-teacher.png'); }
+.doc-5 { background-image: url('./Imagenes/documentales/cosmos.png'); }
+.doc-6 { background-image: url('./Imagenes/documentales/making-a-murderer.png'); }
+.doc-7 { background-image: url('./Imagenes/documentales/tiger-king.png'); }
+.doc-8 { background-image: url('./Imagenes/documentales/f1-drive-to-survive.png'); }
+.doc-9 { background-image: url('./Imagenes/documentales/icaro.png'); }
+.doc-10 { background-image: url('./Imagenes/documentales/blackfish.png'); }
+.doc-11 { background-image: url('./Imagenes/documentales/13th.png'); }
+.doc-12 { background-image: url('./Imagenes/documentales/free-solo.png'); }
+.doc-13 { background-image: url('./Imagenes/documentales/el-estafador-de-tinder.png'); }
+.doc-14 { background-image: url('./Imagenes/documentales/planeta-tierra.png'); }
+.doc-15 { background-image: url('./Imagenes/documentales/chefs-table.png'); }
+.doc-16 { background-image: url('./Imagenes/documentales/the-elephant-whisperers.png'); }
+.doc-17 { background-image: url('./Imagenes/documentales/apollo11.png'); }
+.doc-18 { background-image: url('./Imagenes/documentales/super-size-me.png'); }
+.doc-19 { background-image: url('./Imagenes/documentales/el-volcán-rescate-en-whakaari.png'); }
+.doc-20 { background-image: url('./Imagenes/documentales/la-vida-a-color.png'); }
+
+/* =========================================================
+  ESTILOS LOGIN/REGISTRO
+   ========================================================= */
+.cuerpo-login {
+    background-color: #111; 
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+}
+
+.cabecera-login {
+    padding: 20px 40px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 28px;
+    font-weight: 800;
+    color: white;
+}
+
+.contenedor-auth {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.caja-auth {
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 50px 60px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+}
+
+.pestanas-auth {
+    display: flex;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #333;
+}
+
+.pestana-auth {
+    flex: 1;
+    background: none;
+    border: none;
+    color: #8c8c8c;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.pestana-auth.activo {
+    color: #fff;
+    border-bottom: 3px solid #fff; 
+    margin-bottom: -2px; 
+}
+
+.pestana-auth:hover:not(.activo) { color: #ccc; }
+
+.formulario-auth {
+    display: none; 
+    animation: fadeIn 0.4s ease;
+}
+
+.formulario-activo { display: block; }
+
+.formulario-auth h2 {
+    color: white;
+    margin: 0 0 25px 0;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.fila-inputs { display: flex; gap: 15px; }
+
+.grupo-input {
+    position: relative;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.grupo-input input {
+    width: 100%;
+    padding: 22px 15px 8px 15px; 
+    background-color: #333;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    color: white;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: background-color 0.3s, border 0.3s;
+}
+
+.grupo-input input:focus {
+    background-color: #444;
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.grupo-input label {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    font-size: 1rem;
+    pointer-events: none; 
+    transition: 0.2s ease all;
+}
+
+.grupo-input input:focus ~ label,
+.grupo-input input:valid ~ label {
+    top: 14px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.btn-auth {
+    width: 100%;
+    padding: 16px;
+    background: linear-gradient(135deg, #4f46e5, #e11d48); 
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-auth:hover {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(225, 29, 72, 0.4);
+}
+
+.enlace-cambio-auth {
+    color: #8c8c8c;
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.enlace-cambio-auth a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.enlace-cambio-auth a:hover { text-decoration: underline; }
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- ALERTAS --- */
+.alerta {
+    padding: 12px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: center;
+    transition: opacity 0.3s ease;
+}
+
+.oculto { display: none !important; opacity: 0; }
+
+.alerta.error { background-color: rgba(225, 29, 72, 0.2); color: #ff4d4d; border: 1px solid #ff4d4d; }
+.alerta.exito { background-color: rgba(70, 211, 105, 0.2); color: #46d369; border: 1px solid #46d369; }
+
+/* --- MENÚ DESPLEGABLE DEL PERFIL --- */
+.contenedor-perfil { position: relative; cursor: pointer; }
+
+.icono-perfil { display: flex; align-items: center; gap: 5px; }
+
+.icono-perfil img {
+  width: 40px;
+  height: 40px;
+  border-radius: 5px; 
+  object-fit: cover;
+  border: 1px solid transparent;
+  transition: border 0.3s ease;
+}
+
+.contenedor-perfil:hover .icono-perfil img { border: 1px solid white; }
+
+.menu-desplegable {
+  position: absolute;
+  top: 60px; 
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  border: 1px solid #333;
+  border-radius: 6px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-desplegable.mostrar { opacity: 1; visibility: visible; transform: translateY(0); }
+
+.menu-desplegable a {
+  color: #e0e0e0;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.menu-desplegable a:hover { background-color: #222; color: white; }
+
+.separador-desplegable { height: 1px; background-color: #333; margin: 8px 0; }
+
+.enlace-salir:hover { color: #ff4d4d !important; }
+
+/* --- PAGINA DE PERFIL --- */
+.cuerpo-pagina-perfil { background-color: #111; color: white; min-height: 100vh; }
+
+.contenedor-principal-perfil { max-width: 1000px; margin: 50px auto; padding: 0 20px; }
+
+.contenedor-principal-perfil h1 { font-size: 3.5rem; font-weight: 800; margin-bottom: 40px; }
+
+.contenido-perfil {
+  display: flex;
+  gap: 60px;
+  background-color: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 15px;
+  flex-wrap: wrap;
+}
+
+.enlace-volver { color: #ccc; text-decoration: none; font-weight: 500; transition: color 0.3s; }
+.enlace-volver:hover { color: white; }
+
+.seccion-editar-avatar { flex: 1; min-width: 300px; }
+
+.contenedor-avatar-actual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+#avatar-actual-usuario {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 3px solid white;
+}
+
+.cuadricula-seleccion-avatar { margin-top: 15px; }
+
+.cuadricula-avatares {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.opcion-avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s, border 0.2s;
+  border: 2px solid transparent;
+}
+
+.opcion-avatar:hover { transform: scale(1.1); border-color: white; }
+
+.seccion-editar-info { flex: 1.5; min-width: 300px; }
+
+.caja-info { margin-bottom: 25px; border-bottom: 1px solid #333; padding-bottom: 10px; }
+
+.caja-info label { color: #888; font-size: 0.9rem; display: block; margin-bottom: 5px; }
+
+.caja-info p { font-size: 1.2rem; font-weight: 600; margin: 0; }
+
+.etiqueta-plan { color: #e11d48; font-weight: bold !important; }
+
+.input-perfil {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #555; 
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 5px 0 8px 0;
+  font-family: 'Inter', sans-serif;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.input-perfil:focus { border-bottom: 1px solid #e11d48; }
+
+/* --- FOOTER --- */
+footer {
+    width: 100%;
+    min-height: 70px;          
+    background-color: #0f0f0f;
+    padding: 0 20px;           
+    margin-top: 50px;
+    border-top: 1px solid #333;
+    color: #9d9db8;
+    box-sizing: border-box;
+    display: flex;             
+    align-items: center;
+}
+
+.contenido-footer {
+    width: 100%;
+    max-width: 1200px;         
+    margin: 0 auto;            
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;       
+    gap: 15px;
+}
+
+.derechos-autor { margin: 0; font-size: 1rem; font-weight: 400; }
+
+footer a {
+    color: #9d9db8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;           
+    font-weight: 400;
+}
+
+footer a:hover { color: white; }
+
+.enlaces-legales { display: flex; gap: 20px; align-items: center; }
+
+@media (max-width: 600px) {
+    footer { padding: 15px 20px; }
+    .contenido-footer { flex-direction: column; justify-content: center; text-align: center; }
+}
+
+/* =========================================================
+  ESTILOS EXCLUSIVOS PARA LA PÁGINA DE CONFIGURACIÓN
+   ========================================================= */
+.contenedor-configuracion { max-width: 1100px; margin: 50px auto; padding: 0 20px; color: white; }
+
+.contenedor-configuracion h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 20px;
+}
+
+.diseno-configuracion { display: flex; gap: 40px; }
+
+/* --- Menú Lateral --- */
+.barra-lateral-configuracion { width: 250px; display: flex; flex-direction: column; gap: 10px; flex-shrink: 0; }
+
+.pestana-configuracion {
+    background: transparent;
+    border: none;
+    color: #8c8c8c;
+    text-align: left;
+    padding: 15px 20px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
+}
+
+.pestana-configuracion:hover { background-color: rgba(255, 255, 255, 0.05); color: white; }
+
+.pestana-configuracion.activo {
+    background-color: #222;
+    color: white;
+    border-left: 4px solid #e11d48; 
+}
+
+/* --- Contenido Principal --- */
+.contenido-configuracion {
+    flex-grow: 1;
+    background-color: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 12px;
+    min-height: 400px;
+}
+
+.panel-configuracion { display: none; animation: fadeIn 0.4s ease; }
+
+.panel-configuracion.activo { display: block; }
+
+.panel-configuracion h2 { font-size: 1.8rem; margin-top: 0; margin-bottom: 30px; color: #fff; }
+
+.elemento-configuracion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 1px solid #333;
+}
+
+.elemento-configuracion:last-child { border-bottom: none; }
+
+.texto-configuracion h3 { margin: 0 0 5px 0; font-size: 1.1rem; font-weight: 600; }
+.texto-configuracion p { margin: 0; color: #8c8c8c; font-size: 0.9rem; }
+
+.select-configuracion {
+    background-color: #222;
+    color: white;
+    border: 1px solid #444;
+    padding: 10px 15px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    cursor: pointer;
+}
+
+.interruptor { position: relative; display: inline-block; width: 50px; height: 28px; }
+.interruptor input { opacity: 0; width: 0; height: 0; }
+
+.deslizador-interruptor {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #444;
+    transition: .3s;
+    border-radius: 34px;
+}
+
+.deslizador-interruptor:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .3s;
+    border-radius: 50%;
+}
+
+input:checked + .deslizador-interruptor { background-color: #e11d48; }
+input:checked + .deslizador-interruptor:before { transform: translateX(22px); }
+
+/* --- Tarjeta de Plan --- */
+.tarjeta-plan {
+    background: linear-gradient(135deg, rgba(79, 70, 229, 0.1), rgba(225, 29, 72, 0.1));
+    border: 1px solid rgba(225, 29, 72, 0.3);
+    border-radius: 12px;
+    padding: 25px;
+}
+
+.cabecera-tarjeta-plan { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.cabecera-tarjeta-plan h3 { margin: 0; font-size: 1.4rem; color: #fff; }
+.precio-plan { font-size: 1.2rem; font-weight: bold; color: #e11d48; }
+.tarjeta-plan p { color: #ccc; margin: 0; font-size: 0.95rem; line-height: 1.5; }
+
+@media (max-width: 768px) {
+    .diseno-configuracion { flex-direction: column; }
+    .barra-lateral-configuracion { width: 100%; flex-direction: row; overflow-x: auto; }
+    .elemento-configuracion { flex-direction: column; align-items: flex-start; gap: 15px; }
+}
+
+/* =========================================================
+    ESTILOS PARA LA PÁGINA DE DETALLES / REPRODUCTOR
+   ========================================================= */
+
+.cuerpo-reproductor {
+    background-color: #000; 
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.nav-transparente {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+    z-index: 100;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+    /* ESTO ES LA MAGIA: Evita que el contenedor nav bloquee los clics por debajo */
+    pointer-events: none; 
+}
+
+/* Y reactivamos los clics SOLO en los botones del nav */
+.nav-izq, .nav-der {
+    pointer-events: auto;
+}
+
+.enlace-volver-icono {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.enlace-volver-icono:hover { transform: scale(1.05); }
+
+.fondo-hero-serie {
+    position: relative;
+    width: 100%;
+    height: 100vh; 
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center; 
+}
+
+.degradado-hero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%),
+                linear-gradient(to top, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 20%);
+    z-index: 1;
+    /* ESTO ES LA MAGIA 2: Evita que el degradado negro bloquee los botones */
+    pointer-events: none; 
+}
+
+.info-serie-detalle {
+    position: relative;
+    z-index: 2;
+    padding-left: 60px;
+    max-width: 650px;
+    color: white;
+    margin-top: 50px;
+}
+
+.logo-gigante-serie {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 30px;
+}
+
+.metadatos-serie {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 25px;
+}
+
+.coincidencia { color: #46d369; font-weight: bold; }
+
+.etiqueta-edad {
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.9rem;
+}
+
+.calidad-hd {
+    border: 1px solid rgba(255,255,255,0.4);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #ccc;
+}
+
+.sinopsis-detalle {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.reparto-info {
+    font-size: 0.95rem;
+    color: #a3a3a3;
+    margin-bottom: 40px;
+}
+
+.reparto-info p { margin: 5px 0; }
+.reparto-info strong { color: #fff; }
+
+.botones-accion-serie {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-reproducir-gigante {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    color: black;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 6px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.btn-reproducir-gigante:hover {
+    background-color: #e6e6e6;
+    transform: scale(1.05);
+}
+
+.btn-secundario-circulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(42, 42, 42, 0.6);
+    border: 2px solid rgba(255,255,255,0.5);
+    color: white;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secundario-circulo:hover {
+    border-color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
+}
+
+/* --- MODAL DE VIDEO --- */
+.modal-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-cerrar-video {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    z-index: 1001;
+    transition: transform 0.2s;
+}
+
+.btn-cerrar-video span { font-size: 40px; }
+.btn-cerrar-video:hover { transform: scale(1.2); color: #e11d48; }
+
+.contenedor-iframe { width: 100%; height: 100%; }
+.contenedor-iframe iframe { width: 100%; height: 100%; }
+
+/* =========================================================
+   ESTILOS PARA LA PÁGINA DE BÚSQUEDA
+   ========================================================= */
+   .contenedor-busqueda-pagina {
+    padding: 100px 40px 40px 40px; /* Espacio para el nav de arriba */
+    color: white;
+    min-height: 80vh;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.titulo-resultados {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 800;
+}
+
+.texto-resaltado {
+    color: #e11d48; /* El color fucsia/rojo de Fliver */
+}
+
+.cuadricula-resultados {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+.tarjeta-resultado {
+    aspect-ratio: 16 / 9;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: flex-end;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+}
+
+.tarjeta-resultado:hover {
+    transform: scale(1.05);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.tarjeta-resultado h3 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    background: rgba(0,0,0,0.7); /* Fondo oscuro para que se lea el texto */
+    padding: 5px 10px;
+    border-radius: 4px;
+    width: 100%;
+    text-align: center;
+}
+
+.sin-resultados {
+    font-size: 1.2rem;
+    color: #8c8c8c;
+    text-align: left;
+    margin-top: 20px;
+}
