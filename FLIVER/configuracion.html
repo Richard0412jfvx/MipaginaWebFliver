@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Fliver - Configuración</title>
+    <link rel="icon" type="image/png" href="Imagenes/logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="cuerpo-pagina-perfil">
+
+    <nav>
+        <div class="nav-izq">
+            <a href="index.html" style="display:flex; align-items:center; text-decoration:none; color:white;">
+                <img src="Imagenes/logo.png" class="logo" width="50" height="50">
+                <span style="font-size: 24px; font-weight: bold; margin-left: 10px;">Fliver</span>
+            </a>
+        </div>
+        <div class="nav-der">
+            <a href="index.html" class="enlace-volver">Volver al inicio</a>
+        </div>
+    </nav>
+
+    <div class="contenedor-configuracion">
+        <h1>Configuración de la cuenta</h1>
+        
+        <div class="diseno-configuracion">
+            <div class="barra-lateral-configuracion">
+                <button class="pestana-configuracion activo" onclick="abrirPestanaConfiguracion('reproduccion', this)">
+                    <span class="material-symbols-outlined">play_circle</span> Reproducción
+                </button>
+                <button class="pestana-configuracion" onclick="abrirPestanaConfiguracion('seguridad', this)">
+                    <span class="material-symbols-outlined">lock</span> Seguridad
+                </button>
+                <button class="pestana-configuracion" onclick="abrirPestanaConfiguracion('plan', this)">
+                    <span class="material-symbols-outlined">credit_card</span> Plan y Pagos
+                </button>
+            </div>
+
+            <div class="contenido-configuracion">
+                
+                <div id="alerta-configuracion" class="alerta oculto"></div>
+
+                <div id="tab-reproduccion" class="panel-configuracion activo">
+                    <h2>Preferencias de visualización</h2>
+                    
+                    <div class="elemento-configuracion">
+                        <div class="texto-configuracion">
+                            <h3>Reproducción automática del siguiente episodio</h3>
+                            <p>Comienza el siguiente episodio de una serie automáticamente.</p>
+                        </div>
+                        <label class="interruptor">
+                            <input type="checkbox" checked>
+                            <span class="deslizador-interruptor"></span>
+                        </label>
+                    </div>
+
+                    <div class="elemento-configuracion">
+                        <div class="texto-configuracion">
+                            <h3>Reproducir tráilers automáticamente</h3>
+                            <p>Reproduce avances mientras navegas por la plataforma.</p>
+                        </div>
+                        <label class="interruptor">
+                            <input type="checkbox" checked>
+                            <span class="deslizador-interruptor"></span>
+                        </label>
+                    </div>
+
+                    <div class="elemento-configuracion">
+                        <div class="texto-configuracion">
+                            <h3>Calidad de video (Descargas)</h3>
+                            <p>Elige la calidad por defecto para descargar contenido.</p>
+                        </div>
+                        <select class="select-configuracion">
+                            <option value="auto">Automática (Recomendada)</option>
+                            <option value="data">Ahorro de datos (SD)</option>
+                            <option value="high">Máxima calidad (4K HDR)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div id="tab-seguridad" class="panel-configuracion">
+                    <h2>Seguridad y Privacidad</h2>
+                    
+                    <div class="elemento-configuracion">
+                        <div class="texto-configuracion">
+                            <h3>Contraseña</h3>
+                            <p>Te enviaremos un correo seguro para restablecer tu contraseña actual.</p>
+                        </div>
+                        <button class="btn-auth" id="btn-reset-password" style="width: auto; padding: 10px 20px; font-size: 0.95rem;">Cambiar contraseña</button>
+                    </div>
+
+                    <div class="elemento-configuracion">
+                        <div class="texto-configuracion">
+                            <h3>Cerrar sesión en todos los dispositivos</h3>
+                            <p>Cierra sesión en televisores, móviles y navegadores web activos.</p>
+                        </div>
+                        <button class="btn-auth" style="width: auto; padding: 10px 20px; font-size: 0.95rem; background: #333;">Cerrar todas las sesiones</button>
+                    </div>
+                </div>
+
+                <div id="tab-plan" class="panel-configuracion">
+                    <h2>Suscripción y Facturación</h2>
+                    
+                    <div class="tarjeta-plan">
+                        <div class="cabecera-tarjeta-plan">
+                            <h3>Fliver Premium 4K</h3>
+                            <span class="precio-plan">15,99 € / mes</span>
+                        </div>
+                        <p>Resolución 4K + HDR. Audio espacial. Sin anuncios. Descargas en 6 dispositivos.</p>
+                        <button class="btn-auth" style="width: auto; padding: 10px 20px; margin-top: 15px; font-size: 0.95rem; background: #333;">Cambiar de plan</button>
+                    </div>
+
+                    <div class="elemento-configuracion" style="margin-top: 30px;">
+                        <div class="texto-configuracion">
+                            <h3>Método de pago actual</h3>
+                            <p style="display: flex; align-items: center; gap: 10px; margin-top: 5px;">
+                                <span class="material-symbols-outlined">credit_card</span> 
+                                Visa terminada en •••• 4242
+                            </p>
+                        </div>
+                        <button style="background: none; border: none; color: #4f46e5; font-weight: bold; cursor: pointer;">Actualizar pago</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function abrirPestanaConfiguracion(idPestana, elementoBoton) {
+            const paneles = document.querySelectorAll('.panel-configuracion');
+            paneles.forEach(panel => panel.classList.remove('activo'));
+            
+            const pestanas = document.querySelectorAll('.pestana-configuracion');
+            pestanas.forEach(pestana => pestana.classList.remove('activo'));
+            
+            document.getElementById('tab-' + idPestana).classList.add('activo');
+            elementoBoton.classList.add('activo');
+            document.getElementById('alerta-configuracion').classList.add('oculto');
+        }
+
+        function mostrarAlertaConfiguracion(mensaje, tipo) {
+            const cajaAlerta = document.getElementById('alerta-configuracion');
+            cajaAlerta.textContent = mensaje;
+            cajaAlerta.className = 'alerta ' + tipo;
+            cajaAlerta.classList.remove('oculto');
+            setTimeout(() => { cajaAlerta.classList.add('oculto'); }, 4000);
+        }
+    </script>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAuth, onAuthStateChanged, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBi_VG0KXAGCZEUeCuNwGZnQ4jpAp08SdU",
+            authDomain: "fliver-43e68.firebaseapp.com",
+            projectId: "fliver-43e68",
+            storageBucket: "fliver-43e68.firebasestorage.app",
+            messagingSenderId: "512225812744",
+            appId: "1:512225812744:web:fc8e51e84de4f3a8938cbd"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        let correoUsuario = "";
+
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                correoUsuario = user.email; 
+            } else {
+                window.location.href = 'login.html';
+            }
+        });
+
+        document.getElementById('btn-reset-password').addEventListener('click', () => {
+            const btn = document.getElementById('btn-reset-password');
+            btn.textContent = "Enviando...";
+            btn.disabled = true;
+
+            sendPasswordResetEmail(auth, correoUsuario)
+                .then(() => {
+                    mostrarAlertaConfiguracion('¡Revisa tu bandeja de entrada! Te hemos enviado un enlace para cambiar tu contraseña.', 'exito');
+                })
+                .catch((error) => {
+                    mostrarAlertaConfiguracion('Hubo un error al enviar el correo.', 'error');
+                })
+                .finally(() => {
+                    btn.textContent = "Cambiar contraseña";
+                    btn.disabled = false;
+                });
+        });
+    </script>
+</body>
+</html>
